@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import Login from "./modules/Login";
+import Navgiation from "./modules/Navigation";
+
+import MyBooks from "./modules/MyBooks";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const [currentlyBeingViewed, setCurrentlyBeingViewed] = useState("now-reading");
+	const [books, setBooks] = useState([]);
+	useEffect(() => {
+		// fetch the books based on 'currentlyBeingViewed'
+	});
+	return (
+		<div className="App">
+			<header className="header">
+				<h1>My Library</h1>
+				<Login />
+			</header>
+			<main className="main">
+				<Navgiation setWhatBooksToShow={setCurrentlyBeingViewed} />
+				<MyBooks books={books} />
+			</main>
+		</div>
+	);
 }
 
 export default App;

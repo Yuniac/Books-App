@@ -1,0 +1,18 @@
+.login-container {
+	border: 1px solid lime;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.logging-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+.login-container .login-button {
+	margin: 1rem 0;
+	align-self: center;
+}
+.login-button input {
+	padding: 0.5rem;
+}

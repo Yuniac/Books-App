@@ -1,0 +1,13 @@
+.books-gallery span {
+	display: inline-block;
+	margin: 1rem;
+	text-decoration: underline;
+	text-transform: uppercase;
+}
+.books-gallery {
+	background: lime;
+	display: flex;
+	justify-content: space-around;
+
+	margin-top: 5rem;
+}
